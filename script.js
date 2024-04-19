@@ -6,10 +6,10 @@ function fibonacci(num) {
 	    a = b;
 	    b = sum;
 	}
-	if (num == 1) {
-	    return a;
-		} else {
-	    return b;
+	if (num==1 || num==2){
+		return num-1;
+	}else{
+		return b;
 	}
 }
 
