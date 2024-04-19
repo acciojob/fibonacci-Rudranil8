@@ -1,13 +1,16 @@
 function fibonacci(num) {
-	let mult=1;
-	if(num==0){
-		return 1;
-	}else{
-		for(i=num; i>=1; i--){
-			mult=mult*i;
-		}
+	let a = 0;
+	let b = 1;
+	for (let i = 2; i <= num; i++) {
+	    let sum = a + b;
+	    a = b;
+	    b = sum;
 	}
-	return mult;
+	if (num == 1) {
+	    return a;
+		} else {
+	    return b;
+	}
 }
 
 module.exports = fibonacci;
