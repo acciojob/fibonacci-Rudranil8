@@ -14,11 +14,14 @@
 // }
 
 // module.exports = fibonacci;
+
 function fibonacci(num) {
     if (num <= 0) {
         return "Input should be a positive integer";
     } else if (num == 1) {
         return 0;
+    } else if (num == 2) {
+        return 1;
     }
     let a = 0;
     let b = 1;
@@ -27,7 +30,7 @@ function fibonacci(num) {
         a = b;
         b = c;
     }
-    return a;
+    return b;
 }
 
 module.exports = fibonacci;
